@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
-
+import { useUser, UserButton } from "@clerk/nextjs";
 const Hero = () => {
+  const { user, isSignedIn } = useUser();
   return (
     <div>
       <section className="bg-gray-900 text-white">
@@ -16,14 +18,21 @@ const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
-                className="block w-full rounded border border-blue-600 bg-[#5417D7] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-                href="#"
-              >
-                Get Started
-              </a>
-
-              
+              {isSignedIn ? (
+                <a
+                  className="block w-full rounded border border-blue-600 bg-[#5417D7] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                  href="/dashboard"
+                >
+                  Dashboard
+                </a>
+              ) : (
+                <a
+                  className="block w-full rounded border border-blue-600 bg-[#5417D7] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                  href="/sign-in"
+                >
+                  Get Started
+                </a>
+              )}
             </div>
           </div>
         </div>
