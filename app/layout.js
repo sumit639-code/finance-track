@@ -7,6 +7,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/sonner";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
@@ -23,7 +24,9 @@ export default function RootLayout({ children }) {
         <body className={outfit.className}>
           <header>
           </header>
-          <main>{children}</main>
+          <main>
+          <Toaster />
+            {children}</main>
         </body>
       </html>
     </ClerkProvider>
