@@ -1,9 +1,10 @@
+"use client"
 import React from 'react'
 import Image from "next/image";
 import { LayoutGrid, PiggyBank,ReceiptText,sheildCheck } from 'lucide-react';
 import { UserButton } from '@clerk/nextjs';
 
-function SideNav() {
+const  SideNav=()=> {
   const menuList=[
     {
       id:1,
