@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 const Header = () => {
   return (
     <>
-        <div className='p-5 flex justify-between'>
+        <div className='bg-gray-900 p-5 flex justify-between items-center border shadow-sm text-white'>
             <Image
             src={'./logo.svg'}
             alt='logo'
