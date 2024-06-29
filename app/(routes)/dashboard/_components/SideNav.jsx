@@ -36,7 +36,7 @@ const SideNav = () => {
           {menuList.map((menu, index) => (
             <h2
               className="flex gap-2 items-center text-gray-500  font-medium p-5 cursor-pointer rounded-md 
-          hover:text-blue-800 hover: bg-blue-100"
+          hover:text-blue-800 hover:bg-blue-100"
               key={menu.id}
             >
               <menu.icon />
@@ -44,7 +44,7 @@ const SideNav = () => {
             </h2>
           ))}
         </div>
-        <div className="fixed bottom-10 p-5 flex hap-2 items-center">
+        <div className="fixed bottom-10 p-5 flex gap-2 items-center">
           <UserButton />
           profile
         </div>
