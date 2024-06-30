@@ -27,8 +27,8 @@ function page({ params }) {
       .where(eq(Budgets.id, params.id))
       .groupBy(Budgets.id);
 
-    setBudgetInfo(result);
-    //   console.log(result);
+    setBudgetInfo(result[0]);
+      console.log(BudgetInfo);
   };
 
   return (
@@ -36,7 +36,7 @@ function page({ params }) {
       <h2 className="text-2xl font-bold">My Expenses</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 mt-6">
         {BudgetInfo ? (
-          <Budgetitem budget={BudgetInfo} />
+           <Budgetitem budget={BudgetInfo} />
         ) : (
           <div className="h-[150px] w-full bg-slate-299 rounded-lg animate-pulse"></div>
         )}
