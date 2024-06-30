@@ -18,7 +18,7 @@ import { toast } from "sonner";
 import { DialogFooter } from "@/components/ui/dialog";
 import { DialogClose } from "@/components/ui/dialog";
 
-const Createbudget = () => {
+const Createbudget = ({ refreshData }) => {
   const [emojiIcon, setEmojiIcon] = useState("☺️");
   const [openEmoji, setOpenEmoji] = useState(false);
   const [name, setName] = useState();
@@ -36,6 +36,7 @@ const Createbudget = () => {
       .returning({ insertedId: Budgets.id });
 
     if (result) {
+      refreshData();
       toast("New Budget is created");
     }
   };
@@ -64,7 +65,7 @@ const Createbudget = () => {
               >
                 {emojiIcon}
               </Button>
-              <div className="absolute">
+              <div className="absolute z-20">
                 <EmojiPicker
                   open={openEmoji}
                   onEmojiClick={(e) => {
