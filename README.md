@@ -1,7 +1,7 @@
 This is a Finance Tracker Website 
 
 
-[!screenshot](/public/dashboard.jpeg)
+![screenshot](/public/dashboard.jpeg)
 
 
 
