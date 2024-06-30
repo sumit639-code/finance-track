@@ -1,13 +1,9 @@
-"use client"
-import React from 'react' 
-import SideNav from './_components/SideNav'
+import React from 'react'
+
 
 const page = () => {
   return (
-    <div>
-      <SideNav/>
-    </div>
-
+    <div>page</div>
   )
 }
 
