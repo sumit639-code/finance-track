@@ -107,7 +107,7 @@ const page = ({ params }) => {
           </AlertDialog>
         </div>
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-5 transition-all">
         {BudgetInfo ? (
           <Budgetitem budget={BudgetInfo} />
         ) : (

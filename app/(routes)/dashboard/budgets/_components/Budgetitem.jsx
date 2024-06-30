@@ -33,7 +33,7 @@ const Budgetitem = ({ budget }) => {
           </div>
           <div className="w-full bg-slate-300 h-2 rounded-lg">
             <div
-              className=" bg-blue-500 h-2 rounded-lg"
+              className=" bg-blue-500 h-2 rounded-lg transition-all duration-600"
               style={{ width: `${calculateProgress()}%` }}
             ></div>
           </div>
