@@ -43,12 +43,12 @@ const SideNav = () => {
           <Image src={"/logo.svg"} alt="logo" width={50} height={50} />
           <span>Finance tracker</span>
         </div>
-        <div className="mt-5">
+        <div className="mt-5 flex flex-col gap-2">
           {menuList.map((menu, index) => (
             <Link href={menu.path}>
             <h2
               className={`flex gap-2 items-center text-gray-500  font-medium p-5 cursor-pointer rounded-md 
-          hover:text-blue-800 hover:bg-blue-100 ${path==menu.path&&'text-primary bg-blue-100'}`}
+          hover:text-blue-800 hover:bg-blue-100 transition-all ${path==menu.path&&'text-primary bg-blue-100'}`}
               key={menu.id}
             >
               <menu.icon />
